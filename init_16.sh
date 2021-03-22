@@ -1,4 +1,4 @@
-# init a ubuntu 18.04 LTS
+# init a ubuntu 16.04 LTS
 set -x
 ## step 1. change apt.list to  tuna mirror
 if  [ -f "/etc/apt/sources.list.backup" ]
@@ -8,7 +8,7 @@ else
 	cp /etc/apt/sources.list  /etc/apt/sources.list.backup
 fi 
 
-SOURCES_FILE=./source_18_04.txt
+SOURCES_FILE=./source_16_04.txt
 cat $SOURCES_FILE > /etc/apt/sources.list
 
 ## step 2. isntall ssh and start sshd on start
